@@ -1,0 +1,705 @@
+.Modal__Overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    overflow-y: auto
+}
+
+.Modal__Overlay--transparent {
+    background-color: transparent
+}
+
+.Modal__Overlay--enter {
+    opacity: 0
+}
+
+.Modal__Overlay--enter-active {
+    opacity: 1;
+    transition: opacity .3s ease-in-out
+}
+
+.Modal__Overlay--exit {
+    opacity: 1
+}
+
+.Modal__Overlay--exit-active {
+    opacity: 0;
+    transition: opacity .3s ease-in-out .2s
+}
+
+.Modal__Overlay--default {
+    background-color: rgba(3,25,58,.9)
+}
+
+.Modal__Overlay--dark {
+    background-color: rgba(11,15,22,.9);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px)
+}
+
+.Modal__Container {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    left: 20px;
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+    width: -webkit-max-content;
+    width: max-content;
+    min-width: 300px;
+    max-width: calc(100vw - 40px);
+    height: auto;
+    max-height: calc(100vh - 40px);
+    margin: 0 auto
+}
+
+.Modal__Container--appear {
+    -webkit-transform: translateY(-3%);
+    transform: translateY(-3%)
+}
+
+.Modal__Container--appear-active {
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+
+.Modal__Container--appear-active,.Modal__Container--exit {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.Modal__Container--exit-active {
+    -webkit-transform: translateY(-3%);
+    transform: translateY(-3%);
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+
+@media(max-width: 340px) {
+    .Modal__Container {
+        top:1%;
+        right: 10px;
+        left: 10px
+    }
+}
+
+@media(max-width: 360px) {
+    .Modal__Container {
+        top:1%;
+        right: 15px;
+        left: 15px
+    }
+}
+
+@media(min-width: 341px)and (max-width:550px) {
+    .Modal__Container {
+        top:8%
+    }
+}
+
+.Modal__Container--Middle {
+    top: 30%
+}
+
+.Modal__Container--Visible {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+}
+
+.Modal__Container--Relative {
+    position: relative;
+    right: 0;
+    left: 0;
+    display: block
+}
+
+.Modal__Container--Centered {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.Modal__Container--As-Page {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    padding: 0;
+    -webkit-transform: translate(0);
+    transform: translate(0)
+}
+
+.Modal__Container--As-Page .Modal-Header {
+    padding: 0 15px
+}
+
+.Modal__Container--As-Page .Modal-Background {
+    height: 100%;
+    max-height: 100%;
+    padding: 15px 0;
+    background-color: #03193a;
+    border-radius: 0
+}
+
+.Modal__Container--As-Page .Modal-Body {
+    height: 100%;
+    max-height: 100%
+}
+
+.Modal-Background {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 15px
+}
+
+.Modal-Background--default {
+    background-color: #12294a
+}
+
+.Modal-Background--dark {
+    background-color: #111823;
+    border: 1px solid rgba(29,37,49,.69)
+}
+
+.Modal-Header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px
+}
+
+.Modal-Header--WithTitle {
+    margin-bottom: 30px
+}
+
+.Modal-Header-Absolute {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 2
+}
+
+.Modal-Header-Controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.Modal-Title {
+    text-align: center
+}
+
+.Modal-Loader {
+    display: none
+}
+
+.Modal-Body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: visible
+}
+
+.sb-show-main .Modal-Body {
+    border: 1px solid hsla(0,0%,100%,.05)
+}
+
+.Modal-Body:empty+.Modal-Loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px
+}
+
+.Modal-Body::-webkit-scrollbar {
+    display: none
+}
+
+.Modal-Body::-moz-scrollbar {
+    display: none
+}
+
+.Modal-Body::-o-scrollbar {
+    display: none
+}
+
+.Modal-Type2 .Modal-Background {
+    padding: 0
+}
+
+.Modal-Type3 .Modal__Container--As-Page .Modal-Body {
+    margin: auto
+}
+
+.Modal-Type3 .Modal__Container--As-Page .Modal-Body:empty+.Modal-Loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.Modal-Type4 .Modal-Background {
+    overflow: visible
+}
+
+.Modal-Type4 .Modal__Container {
+    width: -webkit-max-content;
+    width: max-content
+}
+
+.Modal-Type5 .Modal-Background,.Modal-Type6 .Modal-Background {
+    padding: 0
+}
+
+.Modal-Type8 .Modal__Container {
+    right: 0;
+    max-height: 100vh;
+    margin-right: 0
+}
+
+.Modal-Type8 .Modal-Header {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: 66px;
+    margin-bottom: 0!important;
+    padding: 15px;
+    border-bottom: 1px solid rgba(245,249,255,.05)
+}
+
+.Modal-Type8 .Modal-Title {
+    font-size: 21px
+}
+
+.Modal-Type8 .Modal-Body {
+    overflow: scroll
+}
+
+.Modal-Type8 .Modal-Background {
+    height: 100vh;
+    padding: 0;
+    border-radius: unset
+}
+
+.Modal-Type9 .Modal-Header {
+    height: 100px;
+    padding: 20px 20px 0
+}
+
+.Modal-Type9 .Modal-Title {
+    font-size: 21px
+}
+
+.Modal-Type9 .Modal-Body {
+    height: calc(100% - 100px)
+}
+
+.Modal-Type9 .Modal-Background {
+    padding: 0
+}
+
+.Modal-Type10 .Modal-Background {
+    overflow: visible
+}
+
+@media(min-width: 1200px) {
+    .Modal-Type10 .Modal-Background {
+        padding:0
+    }
+}
+
+.Modal-Type11 .Modal-Background {
+    padding: 0
+}
+
+.Modal-Type11 .Modal-Body {
+    overflow: auto
+}
+
+.Modal-Type12 .Modal__Container--As-Page .Modal-Body {
+    margin: auto
+}
+
+.Modal-Type12 .Modal__Container--As-Page .Modal-Body:empty+.Modal-Loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.Modal-Type12 .Modal-Background {
+    padding: 0
+}
+
+.Modal-Type13 .Modal__Container {
+    position: relative
+}
+
+.Modal-Type13 .Modal__Container--As-Page .Modal-Background {
+    padding: 15px 0
+}
+
+.Modal-Type13 .Modal__Container--As-Page .Modal-Body {
+    margin: auto
+}
+
+.Modal-Type13 .Modal__Container--As-Page .Modal-Body:empty+.Modal-Loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+@media(min-width: 768px) {
+    .Modal-Type13 .Modal-Background {
+        overflow:visible
+    }
+}
+
+@media(min-width: 400px) {
+    .Modal-Type13 .Modal-Background {
+        padding:0
+    }
+}
+
+@media(min-width: 768px) {
+    .Modal-Type13 .Modal-Background {
+        padding:15px
+    }
+}
+
+@media(min-width: 1200px) {
+    .Modal-Type13 .Modal-Background {
+        padding:0
+    }
+}
+
+@media(max-width: 500px) {
+    .Modal-Type14 .Modal__Container--Centered {
+        max-height:calc(100vh - 150px)
+    }
+}
+
+@media(min-width: 1200px) {
+    .Modal-Type14 .Modal__Container--Centered {
+        width:50%
+    }
+}
+
+.Modal-Type14 .Modal-Background {
+    border-radius: 18px
+}
+
+.Modal-Type14 .Modal-Body {
+    padding: 0 15px;
+    overflow: auto
+}
+
+@media(min-width: 1024px) {
+    .Modal-Type14 .Modal-Body {
+        padding:0 20px
+    }
+}
+
+.Modal-Type14 .Modal-Body::-webkit-scrollbar {
+    width: 4px;
+    height: 190px
+}
+
+.Modal-Type14 .Modal-Body::-webkit-scrollbar-thumb {
+    background-color: #3555ff;
+    border-radius: 4px
+}
+
+.Modal-Type15 .Modal-Background {
+    padding: 0;
+    background-color: transparent
+}
+
+.Modal-Type15 .Modal-Header {
+    display: none
+}
+
+.Modal-Type16 .Modal__Container {
+    max-width: 680px
+}
+
+.Modal-Type16 .Modal-Background {
+    padding: 0;
+    background: #061223;
+    border: 1px solid rgba(226,229,233,.04);
+    border-radius: 18px
+}
+
+.Modal-Type16 .Modal-Body {
+    position: relative;
+    overflow: auto
+}
+
+.Modal-Type16 .Modal-Body:after {
+    position: fixed;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg,rgba(6,18,35,0),#08111e);
+    content: ""
+}
+
+.ExternalPaymentStep-Modal-Info {
+    padding: 0 5px 25px!important
+}
+
+.ExternalPaymentStep-Modal-Info .Modal-Info-Title {
+    margin-bottom: 30px
+}
+
+.ExternalPaymentStep-Modal-Info .Modal-Info-Content {
+    display: flex;
+    justify-content: center
+}
+
+.ExternalPaymentStep-Modal-Info .Modal-Info-Content img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 8px
+}
+
+.Modal-Info-Title {
+    margin-bottom: 30px
+}
+
+.Modal-Info-Content {
+    display: flex;
+    justify-content: center
+}
+
+.Modal-Info-Content img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 8px
+}
+
+.TransactionsList-Modal .Modal-Header {
+    margin-bottom: 20px
+}
+
+.TransactionsList-Modal .Modal-Title {
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: normal
+}
+
+.Modal--header__t5_Ob {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25px;
+    margin: 0;
+    border-bottom: unset
+}
+
+.Modal--header_withTitle__vB7qd {
+    height: 72px;
+    margin: -15px -15px 0;
+    padding: 0 15px;
+    border-bottom: 1px solid #1b232f
+}
+
+.Modal--title__3nNfJ {
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%
+}
+
+.Modal--back__vmhq6,.Modal--close__HLnTw {
+    font-size: 30px
+}
+
+.PaymentsNotification--container__pW2Aw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%
+}
+
+@media(min-width: 1200px) {
+    .PaymentsNotification--container__pW2Aw {
+        width:810px;
+        height: 600px
+    }
+}
+
+@media(max-width: 331px) {
+    .PaymentsNotification--container__pW2Aw {
+        width:106%
+    }
+}
+
+.PaymentsNotification--lottie__4Q_Yl {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px
+}
+
+.PaymentsNotification--image__sV0Y1 {
+    width: 100%;
+    height: 100%
+}
+
+.PaymentsNotification--header__IGn7b {
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
+.PaymentsNotification--title__qdJ8U {
+    max-width: 75%;
+    margin-bottom: 45px;
+    text-align: center
+}
+
+@media(min-width: 1200px) {
+    .PaymentsNotification--title__qdJ8U {
+        max-width:35%;
+        margin-bottom: 0
+    }
+}
+
+.PaymentsNotification--subtitle__WsdYx {
+    margin-bottom: 30px;
+    text-align: center
+}
+
+.PaymentsNotification--button__9gdBY {
+    width: 334px
+}
+
+@media(max-width: 400px) {
+    .PaymentsNotification--button__9gdBY {
+        width:100%;
+        margin: 0 auto
+    }
+}
+
+.PaymentsNotification--icon__IaEXP {
+    margin-right: 10px
+}
+
+.WarningInstallation {
+    text-align: center
+}
+
+.WarningInstallation-Message {
+    margin-bottom: 8px
+}
+
+.WarningInstallation-Message .WarningMessage__Icon {
+    margin: 3px 10px 0 0;
+    font-size: 23px!important
+}
+
+.WarningInstallation-Message .WarningMessage__Title {
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: normal;
+    color: #fff;
+    font-weight: 500
+}
+
+.WarningInstallation-Button {
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: .06em;
+    width: 100%;
+    font-weight: 600
+}
+
+.WarningInstallation-Button__App {
+    margin: 24px 0 18px
+}
+
+.WarningInstallation-Button__App-Icon {
+    background: #ff0960;
+    border-radius: 6px
+}
+
+.WarningInstallation-Button img,.WarningInstallation-Button__App-Icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px
+}
+
+.WarningInstallation-Footer {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 10px
+}
+
+.WarningInstallation-Footer__Loading .Link-Text {
+    color: #90a2bd;
+    cursor: default
+}
+
+@media(max-width: 340px) {
+    .WarningInstallation-Footer {
+        margin-top:15px
+    }
+
+    .WarningInstallation-Footer .Link-Text,.WarningInstallation-Footer .Text {
+        font-size: 14px
+    }
+}
+
+.WarningInstallationModal {
+    max-width: 330px
+}
+
+.WarningInstallationModal .Modal-Background {
+    padding: 15px 20px 30px
+}
+
+.WarningMessage--warningMessage__3HzYS {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center
+}
+
+.WarningMessage--warningMessageIcon___4qj9 {
+    margin-top: 2px;
+    margin-right: 8px;
+    color: #fcc332
+}
+
+.WarningMessage--warningMessageTitle__P7p_1 {
+    color: #fcc332;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: -.02em
+}
+
+@media(min-width: 400px) {
+    .WarningMessage--warningMessageTitle__P7p_1 {
+        font-size:13px
+    }
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./1.css" />
+    <link rel="stylesheet" href="./2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Oxygen:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: Segoe UI;
+        src: url(./font/SegoeUI.ttf);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="Modal__Overlay Modal-Type1 Modal__Overlay--default"
+      data-testid="modal"
+      style="z-index: 100"
+    >
+      <div
+        class="Modal__Container Modal__Container--Centered Modal__Container--Relative"
+        data-testid="modal-container"
+        style="z-index: 100"
+      >
+        <div
+          class="Modal-Background Modal-Background--default"
+          data-testid="modal-background"
+        >
+          <div class="Modal-Header Modal-Header--WithTitle">
+            <div class="Modal-Header-Controls">
+              <span></span
+              ><button class="icon close clickable" type="button"></button>
+            </div>
+            <h1 class="Headline1 Modal-Title">Login</h1>
+          </div>
+          <div class="Modal-Body" data-testid="modal-body">
+            <div class="SignIn-Container" data-testid="signIn-container">
+              <div class="Tabs--tabs__xEZnc SignIn-Container__Tabs">
+                <span
+                  class="Tabs--item__DKuYH"
+                  data-testid="phone-tab"
+                  id="phone"
+                  >Phone</span
+                ><span
+                  class="Tabs--item__DKuYH"
+                  data-testid="email-tab"
+                  id="email"
+                  >Email</span
+                ><span
+                  class="Tabs--activeTab__qhlbD"
+                  id="blueDiv"
+                  style="transform: translateX(0%); width: 50%"
+                ></span>
+              </div>
+              <div
+                class="BaseFormField"
+                data-testid="phone-input phone-input-container"
+                id="phoneField"
+              >
+                <div class="PhoneInput--container__QcDLz" >
+                  <button
+                    class="SelectCountryCode--container__I4xFt"
+                    type="button"
+                  >
+                    <span class="SelectCountryCode--image__xSAKt"
+                      ><img
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        src="https://cdn.aglty.io/bluechip-prod-v2/Attachments/NewItems/india-2_20220215134256_0.svg"
+                        style="
+                          position: absolute;
+                          height: 100%;
+                          width: 100%;
+                          inset: 0px;
+                          color: transparent;
+                        " /></span
+                    ><select
+                      class="SelectCountryCode--select__8MDFA"
+                      data-testid="select-country-code"
+                      id="IN"
+                    >
+                      <option id="AL" value="AL">Albania +355</option>
+                      <option id="DZ" value="DZ">Algeria +213</option>
+                      <option id="AD" value="AD">Andorra +376</option>
+                      <option id="AO" value="AO">Angola +244</option>
+                      <option id="AI " value="AI ">Anguilla +1264</option>
+                      <option id="AG" value="AG">
+                        Antigua and Barbuda +1268
+                      </option>
+                      <option id="AR" value="AR">Argentina +54</option>
+                      <option id="AM" value="AM">Armenia +374</option>
+                      <option id="AT" value="AT">Austria +43</option>
+                      <option id="AZ" value="AZ">Azerbaijan +994</option>
+                      <option id="AX" value="AX">Aland Islands +3581</option>
+                      <option id="BS" value="BS">Bahamas +1242</option>
+                      <option id="BH" value="BH">Bahrain +973</option>
+                      <option id="BD" value="BD">Bangladesh +880</option>
+                      <option id="BB" value="BB">Barbados +1246</option>
+                      <option id="BE" value="BE">Belgium +32</option>
+                      <option id="BZ " value="BZ ">Belize +501</option>
+                      <option id="BJ" value="BJ">Benin +229</option>
+                      <option id="BM" value="BM">Bermuda +1441</option>
+                      <option id="BT" value="BT">Bhutan +975</option>
+                      <option id="BO" value="BO">Bolivia +591</option>
+                      <option id="BA" value="BA">
+                        Bosnia and Herzegovina +387
+                      </option>
+                      <option id="BW" value="BW">Botswana +267</option>
+                      <option id="BR" value="BR">Brazil +55</option>
+                      <option id="BN" value="BN">Brunei +673</option>
+                      <option id="BG" value="BG">Bulgaria +359</option>
+                      <option id="BF" value="BF">Burkina Faso +226</option>
+                      <option id="KH" value="KH">Cambodia +855</option>
+                      <option id="CM" value="CM">Cameroon +237</option>
+                      <option id="CA" value="CA">Canada +1</option>
+                      <option id="KY" value="KY">Cayman Islands +1345</option>
+                      <option id="TD" value="TD">Chad +235</option>
+                      <option id="CL" value="CL">Chile +56</option>
+                      <option id="CN" value="CN">China +86</option>
+                      <option id="CX" value="CX">Christmas Island +6189</option>
+                      <option id="CO" value="CO">Colombia +57</option>
+                      <option id="KM" value="KM">Comoros +269</option>
+                      <option id="CR" value="CR">Costa Rica +506</option>
+                      <option id="HR" value="HR">Croatia +385</option>
+                      <option id="CZ " value="CZ ">Czech Republic +420</option>
+                      <option id="DM " value="DM ">Dominica +1767</option>
+                      <option id="DO" value="DO">
+                        Dominican Republic +1829
+                      </option>
+                      <option id="DJ" value="DJ">Djibouti +253</option>
+                      <option id="EC" value="EC">Ecuador +593</option>
+                      <option id="EG" value="EG">Egypt +20</option>
+                      <option id="SV" value="SV">El Salvador +503</option>
+                      <option id="GQ" value="GQ">Equatorial Guinea +240</option>
+                      <option id="ER" value="ER">Eritrea +291</option>
+                      <option id="EE" value="EE">Estonia +372</option>
+                      <option id="SZ" value="SZ">Eswatini +2681</option>
+                      <option id="FK" value="FK">Falkland Islands +500</option>
+                      <option id="FO" value="FO">Faroe Islands +298</option>
+                      <option id="FJ" value="FJ">Fiji +679</option>
+                      <option id="FI" value="FI">Finland +358</option>
+                      <option id="GA" value="GA">Gabon +241</option>
+                      <option id="GM" value="GM">Gambia +220</option>
+                      <option id="GE " value="GE ">Georgia +995</option>
+                      <option id="DE" value="DE">Germany +49</option>
+                      <option id="GH" value="GH">Ghana +233</option>
+                      <option id="GI" value="GI">Gibraltar +350</option>
+                      <option id="GR" value="GR">Greece +30</option>
+                      <option id="GL" value="GL">Greenland +299</option>
+                      <option id="GD" value="GD">Grenada +1473</option>
+                      <option id="GT" value="GT">Guatemala +502</option>
+                      <option id="GG" value="GG">Guernsey +44</option>
+                      <option id="GN " value="GN ">Guinea +224</option>
+                      <option id="GW" value="GW">Guinea Bissau +245</option>
+                      <option id="GY" value="GY">Guyana +592</option>
+                      <option id="HT" value="HT">Haiti +509</option>
+                      <option id="HN" value="HN">Honduras +504</option>
+                      <option id="HK" value="HK">Hong Kong +852</option>
+                      <option id="HU" value="HU">Hungary +36</option>
+                      <option id="HM" value="HM">
+                        Heard Island and McDonald Islands +672
+                      </option>
+                      <option id="IS" value="IS">Iceland +354</option>
+                      <option id="IN" value="IN">India +91</option>
+                      <option id="ID" value="ID">Indonesia +62</option>
+                      <option id="IE" value="IE">Ireland +353</option>
+                      <option id="IT" value="IT">Italy +39</option>
+                      <option id="IM" value="IM">Isle of Man +44</option>
+                      <option id="JM" value="JM">Jamaica +1876</option>
+                      <option id="JP" value="JP">Japan +81</option>
+                      <option id="JO" value="JO">Jordan +962</option>
+                      <option id="JE" value="JE">Jersey +44</option>
+                      <option id="KZ" value="KZ">Kazakhstan +7</option>
+                      <option id="KE" value="KE">Kenya +254</option>
+                      <option id="KI" value="KI">Kiribati +686</option>
+                      <option id="KW" value="KW">Kuwait +965</option>
+                      <option id="KG " value="KG ">Kyrgyzstan +996</option>
+                      <option id="LV " value="LV ">Latvia +371</option>
+                      <option id="LS" value="LS">Lesotho +266</option>
+                      <option id="LR " value="LR ">Liberia +231</option>
+                      <option id="LI " value="LI ">Liechtenstein +423</option>
+                      <option id="LU" value="LU">Luxembourg +352</option>
+                      <option id="MO " value="MO ">Macao +853</option>
+                      <option id="MG" value="MG">Madagascar +261</option>
+                      <option id="MY" value="MY">Malaysia +60</option>
+                      <option id="MV" value="MV">Maldives +960</option>
+                      <option id="ML" value="ML">Mali +223</option>
+                      <option id="MH" value="MH">Marshall Island +692</option>
+                      <option id="MU" value="MU">Martinique +596</option>
+                      <option id="MR" value="MR">Mauritania +222</option>
+                      <option id="YT" value="YT">Mayotte +262</option>
+                      <option id="MU" value="MU">Mauritius +230</option>
+                      <option id="MX" value="MX">Mexico +52</option>
+                      <option id="FM" value="FM">Micronesia +691</option>
+                      <option id="MC" value="MC">Monaco +377</option>
+                      <option id="MN" value="MN">Mongolia +976</option>
+                      <option id="ME" value="ME">Montenegro +382</option>
+                      <option id="MS " value="MS ">Montserrat +1664</option>
+                      <option id="MA" value="MA">Morocco +212</option>
+                      <option id="MZ" value="MZ">Mozambique +258</option>
+                      <option id="NA" value="NA">Namibia +264</option>
+                      <option id="NR" value="NR">Nauru +674</option>
+                      <option id="NP" value="NP">Nepal +977</option>
+                      <option id="NZ" value="NZ">New Zealand +64</option>
+                      <option id="NE" value="NE">Niger +227</option>
+                      <option id="NG" value="NG">Nigeria +234</option>
+                      <option id="NU" value="NU">Niue +683</option>
+                      <option id="NI" value="NI">Nicaragua +505</option>
+                      <option id="MP" value="MP">
+                        Northern Marianas Islands +1670
+                      </option>
+                      <option id="NO" value="NO">Norway +47</option>
+                      <option id="OM" value="OM">Oman +968</option>
+                      <option id="PW" value="PW">Palau +680</option>
+                      <option id="PA" value="PA">Panama +507</option>
+                      <option id="PG" value="PG">Papua New Guinea +675</option>
+                      <option id="PY" value="PY">Paraguay +595</option>
+                      <option id="PE" value="PE">Peru +51</option>
+                      <option id="PH" value="PH">Philippines +63</option>
+                      <option id="PR" value="PR">Puerto Rico +1787</option>
+                      <option id="QA" value="QA">Qatar +974</option>
+                      <option id="MK" value="MK">
+                        Republic of Macedonia +389
+                      </option>
+                      <option id="RO " value="RO ">Romania +40</option>
+                      <option id="RW" value="RW">Rwanda +250</option>
+                      <option id="SM" value="SM">San Marino +378</option>
+                      <option id="SH" value="SH">
+                        Saint Helena, Ascension and Tristan da Cunha +290
+                      </option>
+                      <option id="SN" value="SN">Senegal +221</option>
+                      <option id="RS" value="RS">Serbia +381</option>
+                      <option id="SC" value="SC">Seychelles +248</option>
+                      <option id="SL" value="SL">Sierra Leone +232</option>
+                      <option id="SG" value="SG">Singapore +65</option>
+                      <option id="SK" value="SK">Slovakia +421</option>
+                      <option id="SI" value="SI">Slovenia +386</option>
+                      <option id="SB" value="SB">Solomon Islands +677</option>
+                      <option id="ZA" value="ZA">South Africa +27</option>
+                      <option id="KR" value="KR">South Korea +82</option>
+                      <option id="GS" value="GS">
+                        South Georgia and the South Sandwich Islands +500
+                      </option>
+                      <option id="LK" value="LK">Sri Lanka +94</option>
+                      <option id="SD" value="SD">Sudan +249</option>
+                      <option id="SR" value="SR">Suriname +597</option>
+                      <option id="SJ" value="SJ">
+                        Svalbard and Jan Mayen +47
+                      </option>
+                      <option id="SE " value="SE ">Sweden +46</option>
+                      <option id="CH" value="CH">Switzerland +41</option>
+                      <option id="TW" value="TW">Taiwan +886</option>
+                      <option id="TJ" value="TJ">Tajikistan +992</option>
+                      <option id="TZ" value="TZ">Tanzania +255</option>
+                      <option id="TH" value="TH">Thailand +66</option>
+                      <option id="TG" value="TG">Togo +228</option>
+                      <option id="TK" value="TK">Tokelau +690</option>
+                      <option id="TT " value="TT ">
+                        Trinidad and Tobago +1868
+                      </option>
+                      <option id="TN" value="TN">Tunisia +216</option>
+                      <option id="TR " value="TR ">Turkey +90</option>
+                      <option id="TM" value="TM">Turkmenistan +993</option>
+                      <option id="TC " value="TC ">
+                        Turks and Caicos +1649
+                      </option>
+                      <option id="TV" value="TV">Tuvalu +688</option>
+                      <option id="UG" value="UG">Uganda +256</option>
+                      <option id="AE" value="AE">
+                        United Arab Emirates +971
+                      </option>
+                      <option id="UY" value="UY">Uruguay +598</option>
+                      <option id="UZ" value="UZ">Uzbekistán +998</option>
+                      <option id="VU" value="VU">Vanuatu +678</option>
+                      <option id="VN" value="VN">Vietnam +84</option>
+                      <option id="EH" value="EH">Western Sahara +212</option>
+                      <option id="ZM" value="ZM">Zambia +260</option></select
+                    ><span
+                      data-testid="select-country-code-triangle"
+                      class="SelectCountryCode--triangle__5v4bQ icon triangle"
+                      style="font-size: 8px"
+                    ></span>
+                  </button>
+                  <figure class="PhoneInput--figure__T1lSt"></figure>
+                  <p
+                    data-testid="country-code-value"
+                    class="Text PhoneInput--countryCode__Ohb8w"
+                  >
+                    +91
+                  </p>
+                  <input
+                    autocomplete="off"
+                    data-country="india"
+                    maxlength="10"
+                    minlength="10"
+                    placeholder="8123456789"
+                    size="15"
+                    type="tel"
+                    name="phone"
+                    class="PhoneInput--input___qq5M"
+                    data-testid="phone-input-input"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div id="emailField"  class="BaseFormField Input-Container" style="padding-top: 3.9%; display: none;">
+                
+              <div class="Input-Password">
+                <input
+                  required
+                  data-testid="password-input"
+                  maxlength="32"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  id="emails"
+                />
+                <p
+                  data-testid="password-input-floating-label"
+                  class="Input-Label Input-Floating-Label"
+                >
+                  Email
+                </p>
+              </div>
+              <p class="Error" id="emailError" >Email can't be empty</p>
+            </div>
+              <div class="BaseFormField Input-Container">
+                <div class="Input-Password">
+                  <input
+                    required
+                    data-testid="password-input"
+                    maxlength="32"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    id="password"
+                  />
+                  <p
+                    data-testid="password-input-floating-label"
+                    class="Input-Label Input-Floating-Label"
+                  >
+                    Password
+                  </p>
+                </div>
+                <button
+                data-testid="show-password-button"
+                class="Input-Password-Icon icon eye clickable"
+                type="button"
+                style="font-size: 21px"
+                ></button>
+                <figure></figure>
+                <p
+                data-testid="forgot-password-button"
+                class="Input-Text Input-Password-Forgot-Text"
+                >
+                Forgot?
+              </p>
+              <p class="Error" id="passwordError" >Password can't be empty</p>
+            </div>
+              <button
+                data-testid="signIn-submit-btn"
+                class="Primary Pink-Orange-Gradient SignIn-Submit-Button Disabled"
+                
+                type="button"
+                id="loginBtn"
+                onclick="checkStringLength()"
+              >
+                <p class="Button-Text">Login</p>
+              </button>
+              <div class="SignIn-Footer-Container">
+                <p class="Text-Small">Don’t have an account?</p>
+                <p
+                  data-testid="signIn-footer-link"
+                  class="Link-Text SignIn-Footer-Link-Text"
+                >
+                  Create Account
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="Modal-Loader" data-testid="modal-loader">
+            <div class="Loader--activityLoader__2jIA_ undefined">
+              <div
+                class="Loader--activityLoaderContainer__DElWE"
+                style="width: 50px; height: 50px"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 66 66"
+                  width="66"
+                  height="66"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    transform: translate3d(0px, 0px, 0px);
+                    content-visibility: visible;
+                  "
+                >
+                  <defs>
+                    <clipPath id="__lottie_element_34">
+                      <rect width="66" height="66" x="0" y="0"></rect>
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#__lottie_element_34)">
+                    <g
+                      style="display: block"
+                      transform="matrix(1,0,0,1,33,33)"
+                      opacity="1"
+                    >
+                      <g opacity="1" transform="matrix(2,0,0,2,0,0)">
+                        <path
+                          stroke-linecap="butt"
+                          stroke-linejoin="miter"
+                          fill-opacity="0"
+                          stroke-miterlimit="4"
+                          stroke="rgb(255,255,255)"
+                          stroke-opacity="0.11"
+                          stroke-width="4"
+                          d=" M0,-14.5 C8.00255012512207,-14.5 14.5,-8.00255012512207 14.5,0 C14.5,8.00255012512207 8.00255012512207,14.5 0,14.5 C-8.00255012512207,14.5 -14.5,8.00255012512207 -14.5,0 C-14.5,-8.00255012512207 -8.00255012512207,-14.5 0,-14.5z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g
+                      style="display: block"
+                      transform="matrix(1,0,0,1,33,33)"
+                      opacity="1"
+                    >
+                      <g opacity="1" transform="matrix(2,0,0,2,0,0)">
+                        <path
+                          stroke-linecap="butt"
+                          stroke-linejoin="miter"
+                          fill-opacity="0"
+                          stroke-miterlimit="4"
+                          stroke-dasharray=" 84"
+                          stroke-dashoffset="100"
+                          stroke="rgb(255,255,255)"
+                          stroke-opacity="1"
+                          stroke-width="4"
+                          d=" M0,-14.5 C-8.00255012512207,-14.5 -14.5,-8.00255012512207 -14.5,0 C-14.5,8.00255012512207 -8.00255012512207,14.5 0,14.5 C8.00255012512207,14.5 14.5,8.00255012512207 14.5,0 C14.5,-8.00255012512207 8.00255012512207,-14.5 0,-14.5z"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
